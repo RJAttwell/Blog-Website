@@ -4,24 +4,36 @@
 
     <br>
 
-
     <!-- Upper Bound is the length of our posts array -->
     <% //for(var i=0; i < posts.length; i++ ) {%>
 
         <!-- <p> -->
             <%= //posts[i] %>
         <!-- </p> -->
+               
         <!-- Log just the title of the posts array -->
         <!-- <% //console.log(posts[i].title); %> -->
-    <%//}%>
+    <% //}%>
+    
 
     <!-- Instead of a for loop, we can use the forEach method -->
 
     <% posts.forEach(function(post){ %>
-        <h2><%=post.title%></h2>
-        <p><%=post.body%></p>
-        
+
+        <h2 class="titleText">
+            <%=post.title%>
+        </h2>
+        <p class="contentText">
+            <%=post.body.substring(0,100) + "..." %>
+            <a href="/posts/<%=post.title%>">Read More</a>
+        </p>
+
+        <br>
     <%});%>
+
+    <br>
+
+    <a href="/compose"><button class="btn btn-dark">Compose A New Post</button></a>
 
 
 <%- include("partials/footer") -%>

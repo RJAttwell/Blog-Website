@@ -3,6 +3,34 @@
 <h1>Contact</h1>
 
 <br>
-<p><%=contactContent%></p>
+
+<h3>Send an email</h3>
+<br>
+
+<form action="mailto:richardjattwell@gmail.com" enctype="text/plain">                                                                                      
+    <!--Label allows you to write text that is displayed as a label on form-->
+    <label><b> Name:</b></label>  
+    <!--Input allows several different kinds of objects for user input-->
+    <input type="text" name="yourName" value="">  
+    <br>                                                       
+    <label><b> Email:</b></label>
+    <input type="email" name="yourEmail" value="">
+    <br>
+    <label><b>Message:</b></label>
+    <!--<textarea> generates a multi-line text input area-->
+    <textarea name="messagebox" id="" cols="30" rows="10"></textarea>
+    <!--Creates a submit button-->
+    <br>
+    <br>
+    <button class="btn btn-dark" type="submit" name="submitbutton">Send</button>
+</form>
+
+<br>
+
+<h3>Socials</h3>
+<ul>
+    <li><a href="">LinkedIn</a></li>
+    <li><a href="https://github.com/RJAttwell">GitHub</a></li>
+</ul>
 
 <%- include("partials/footer") -%>
